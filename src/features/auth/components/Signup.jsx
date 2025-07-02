@@ -35,18 +35,21 @@ export const Signup = () => {
   const is900 = useMediaQuery(theme.breakpoints.down(900));
   const is480 = useMediaQuery(theme.breakpoints.down(480));
 
-  // ✅ Handle redirection after signup
-
-
-
-
+  // ✅ Handle redirection after successful signup
+  useEffect(() => {
+    if (status === 'fulfilled' && loggedInUser) {
+      navigate('/otp-verification'); // Redirect to OTP verification only on successful signup
+      reset(); // Reset form after successful signup
+    }
+  }, [status, loggedInUser, navigate, reset]);
 
   // ✅ Handle errors
   useEffect(() => {
     if (error) {
       toast.error(error.message);
+      dispatch(clearSignupError()); // Clear error after displaying
     }
-  }, [error]);
+  }, [error, dispatch]);
 
   // ✅ Cleanup on unmount
   useEffect(() => {
