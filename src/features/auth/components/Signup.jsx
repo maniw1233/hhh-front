@@ -36,18 +36,16 @@ export const Signup = () => {
   const is480 = useMediaQuery(theme.breakpoints.down(480));
 
   // ✅ Handle redirection after signup
-  useEffect(() => {
-  if (loggedInUser) {
-    const onSignup = location.pathname === "/signup";
-    const onVerifyOtp = location.pathname === "/verify-otp";
-
-    if (!loggedInUser?.isVerified && !onVerifyOtp && !onSignup) {
+useEffect(() => {
+  if (signupStatus === 'fullfilled') {
+    if (loggedInUser && !loggedInUser?.isVerified) {
       navigate("/verify-otp");
-    } else if (loggedInUser?.isVerified && !onSignup) {
+    } else if (loggedInUser) {
       navigate("/");
     }
   }
-}, [loggedInUser, location.pathname]);
+}, [loggedInUser, signupStatus]);
+
 
 
 
