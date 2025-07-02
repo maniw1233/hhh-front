@@ -27,7 +27,7 @@ export const Login = () => {
       navigate("/login")
     }
     else if(loggedInUser && !loggedInUser?.isVerified){
-      navigate("/login")
+      navigate("/signup")
     }
   },[loggedInUser])
 
