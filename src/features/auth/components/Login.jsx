@@ -22,14 +22,7 @@ export const Login = () => {
   const is480=useMediaQuery(theme.breakpoints.down(480))
   
   // handles user redirection
-  useEffect(()=>{
-    if(loggedInUser && loggedInUser?.isVerified){
-      navigate("/login")
-    }
-    else if(loggedInUser && !loggedInUser?.isVerified){
-      navigate("/signup")
-    }
-  },[loggedInUser])
+
 
   // handles login error and toast them
   useEffect(()=>{
