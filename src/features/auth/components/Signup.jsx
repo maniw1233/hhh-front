@@ -36,12 +36,12 @@ export const Signup = () => {
   const is480 = useMediaQuery(theme.breakpoints.down(480));
 
   // ✅ Handle redirection after successful signup
-  useEffect(() => {
-    if (status === 'fulfilled' && loggedInUser) {
-      navigate('/otp-verification'); // Redirect to OTP verification only on successful signup
-      reset(); // Reset form after successful signup
-    }
-  }, [status, loggedInUser, navigate, reset]);
+  ususeEffect(() => {
+  if (signupStatus === 'fulfilled' && loggedInUser) {
+    navigate('/otp-verification');
+    reset();
+  }
+}, [signupStatus, loggedInUser, navigate, reset]);
 
   // ✅ Handle errors
   useEffect(() => {
