@@ -22,14 +22,7 @@ export const Signup = () => {
   const is480=useMediaQuery(theme.breakpoints.down(480))
 
   // handles user redirection
-  useEffect(()=>{
-    if(loggedInUser && !loggedInUser?.isVerified){
-      navigate("/verify-otp")
-    }
-    else if(loggedInUser){
-      navigate("/")
-    }
-  },[loggedInUser])
+
 
 
   // handles signup error and toast them
