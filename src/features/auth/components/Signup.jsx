@@ -37,14 +37,18 @@ export const Signup = () => {
 
   // ✅ Handle redirection after signup
   useEffect(() => {
-  if (hasSignedUp.current) {
-    if (loggedInUser && !loggedInUser?.isVerified) {
+  if (loggedInUser) {
+    const onSignup = location.pathname === "/signup";
+    const onVerifyOtp = location.pathname === "/verify-otp";
+
+    if (!loggedInUser?.isVerified && !onVerifyOtp && !onSignup) {
       navigate("/verify-otp");
-    } else if (loggedInUser) {
+    } else if (loggedInUser?.isVerified && !onSignup) {
       navigate("/");
     }
   }
-}, [loggedInUser]);
+}, [loggedInUser, location.pathname]);
+
 
 
   // ✅ Handle errors
