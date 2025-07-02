@@ -37,19 +37,15 @@ export const Signup = () => {
 
   // ✅ Handle redirection after signup
   useEffect(() => {
-    if (status === 'fullfilled') {
-      toast.success("Welcome! Please verify your email.");
-      reset();
+  if (hasSignedUp.current) {
+    if (loggedInUser && !loggedInUser?.isVerified) {
+      navigate("/verify-otp");
+    } else if (loggedInUser) {
+      navigate("/");
     }
+  }
+}, [loggedInUser]);
 
-    if (loggedInUser) {
-      if (!loggedInUser.isVerified) {
-        navigate("/verify-otp");
-      } else {
-        navigate("/");
-      }
-    }
-  }, [loggedInUser, status, navigate, reset]);
 
   // ✅ Handle errors
   useEffect(() => {
