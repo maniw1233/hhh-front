@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/git-frontend/static/css/main.1aa1b982.css",
-    "main.js": "/git-frontend/static/js/main.91b92961.js",
-    "static/media/banner4.jpg": "/git-frontend/static/media/banner4.be7423e08de979dc6c06.jpg",
-    "static/media/banner3.jpg": "/git-frontend/static/media/banner3.cb1379a19a25d4be5c17.jpg",
-    "static/media/banner2.jpg": "/git-frontend/static/media/banner2.9aac27cb5b7d93242e50.jpg",
-    "static/media/banner1.jpg": "/git-frontend/static/media/banner1.5c7cb19b9dcad58e7f56.jpg",
-    "index.html": "/git-frontend/index.html",
-    "main.1aa1b982.css.map": "/git-frontend/static/css/main.1aa1b982.css.map",
-    "main.91b92961.js.map": "/git-frontend/static/js/main.91b92961.js.map"
+    "main.css": "/git-frontend/frontend/static/css/main.1aa1b982.css",
+    "main.js": "/git-frontend/frontend/static/js/main.c04eda7c.js",
+    "static/media/banner4.jpg": "/git-frontend/frontend/static/media/banner4.be7423e08de979dc6c06.jpg",
+    "static/media/banner3.jpg": "/git-frontend/frontend/static/media/banner3.cb1379a19a25d4be5c17.jpg",
+    "static/media/banner2.jpg": "/git-frontend/frontend/static/media/banner2.9aac27cb5b7d93242e50.jpg",
+    "static/media/banner1.jpg": "/git-frontend/frontend/static/media/banner1.5c7cb19b9dcad58e7f56.jpg",
+    "index.html": "/git-frontend/frontend/index.html",
+    "main.1aa1b982.css.map": "/git-frontend/frontend/static/css/main.1aa1b982.css.map",
+    "main.c04eda7c.js.map": "/git-frontend/frontend/static/js/main.c04eda7c.js.map"
   },
   "entrypoints": [
     "static/css/main.1aa1b982.css",
-    "static/js/main.91b92961.js"
+    "static/js/main.c04eda7c.js"
   ]
 }
